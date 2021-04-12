@@ -1,0 +1,25 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/patient" method ="POST" autocomplete ="off">
+    <input type="hidden" name="_id" value="{{patient._id}}">
+   <div class="form-group">
+    <label>Heart Rate</label>
+    <input type="text" class="form-control" name="heartrate" placeholder="Heart Rate">
+    </div>
+    <div class="form-group">
+    <label>Body Temperature</label>
+    <input type="text" class="form-control" name="bodytemp" placeholder="Body Temprature">
+    </div>
+    <div class="form-group">
+    <label>Symptoms</label>
+    <input type="text" class="form-control" name="symptoms" placeholder="Symptoms">
+    </div>
+    <div class="form-group">
+    <label>Diagnosis</label>
+    <input type="text" class="form-control" name="diagnosis" placeholder="Diagnosis">
+    </div>
+    <div class="form-group">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+    <a class="btn btn-secondary" href="/patient/list"><i class="fa fa-list-alt"></i> View All</a>
+      </div>
+</form>

@@ -1,0 +1,25 @@
+<h3><a class="btn btn-secondary" href="/patient"><i class="fa fa-plus"></i> Create New</a> Recent Medical History </h3>
+<table class="table table-stripped">
+ <thead>
+  <tr>
+     <th>Heart Rate</th>
+     <th>Body Temperature</th>
+     <th>Symptoms</th>
+     <th>Depression</th>
+  </tr>
+ </thead>
+ <tbody>
+       {{#each list}}
+    <tr>
+       <td>{{this.heartrate}}</td>
+       <td>{{this.bodytemp}}</td>
+       <td>{{this.symptoms}}</td>
+       <td>{{this.diagnosis}}</td>
+       <td>
+            <a href="/patient/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+            <a href="/patient/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+        </td>                                             
+    </tr>
+    {{/each}}
+ </tbody>
+</table>
